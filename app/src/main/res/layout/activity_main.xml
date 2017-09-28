@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.androidviewsandlayout.MainActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LinearLayout"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:hint="First Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginTop="50dp"
+        android:hint="Last Name"
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:onClick="savePerson"
+            android:id="@+id/btnFirst"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Save to List"/>
+
+        <Button
+            android:onClick="printPerson"
+            android:layout_toRightOf="@id/btnFirst"
+            android:id="@+id/btnSecond"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnFirst"
+            android:text="Print Names"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go To Second"
+            android:layout_toRightOf="@id/btnSecond"
+            android:id="@+id/btnGoToSecond"
+            android:onClick="goToSecond"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivSharingan"
+        android:src="@drawable/mangekyou"
+        android:layout_height="200dp"
+        android:layout_width="200dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/mangekyou"
+        >
+        <ImageView
+            android:id="@+id/ivSharingan2"
+            android:src="@drawable/mangekyou"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="COPY"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            />
+
+
+    </FrameLayout>
+
+</LinearLayout>
